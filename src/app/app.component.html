@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <h2 class="bg-dark text-white p-3">System Test</h2>
+  <div class="row">  
+      <select name="" id="" >
+        <option value="" >Select Cities</option>     
+        <option value="server"
+         *ngFor="let server of servers; 
+         let i = index"          
+         (click)="getCityDedails(server,i)">
+          {{ server.status }}</option>    
+      </select>
+
+    <div class="col-md-12 ">
+      <ul class="list-group">
+         <li class="list-group-item" *ngFor = "let server of secondStatus">
+          <h4
+              class="p-2 text-white bg-dark">
+              {{ server.status }}
+            </h4>
+             <div>
+            <h5 class="text-danger">Name of the City</h5>   {{ server.status | uppercase  }}
+             
+            <h5 class="text-danger">Top Place</h5>    {{ server.name | uppercase  }}
+             
+            <h5 class="text-danger">Pin Code </h5>   {{ server.pincode }}
+          </div>  
+
+            </li>  
+          </ul>
+          <br>       
+        </div>
+    </div>
+</div>
+
+
+
